@@ -26,6 +26,10 @@ if emp_perf_model_path1:
     txt_clr = st.get_option("theme.textColor")
     
     second_clr = "#d87c7c"
+    primary_clr = '#4bff58'
+    second_clr = '33332f'
+    backgroundColor='#0e0e0e'
+    txt_clr = '#f9f9fb'
 else:
     primary_clr = '#4bff58'
     second_clr = '33332f'
