@@ -30,7 +30,7 @@ if emp_perf_model_path1:
     second_clr = '33332f'
     backgroundColor='#0e0e0e'
     txt_clr = '#f9f9fb'
-else:
+
     primary_clr = '#4bff58'
     second_clr = '33332f'
     backgroundColor='#0e0e0e'
