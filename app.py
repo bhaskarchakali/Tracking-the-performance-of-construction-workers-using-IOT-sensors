@@ -21,6 +21,18 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 
+if emp_perf_model_path1:
+    primary_clr = st.get_option("theme.primaryColor")
+    txt_clr = st.get_option("theme.textColor")
+    
+    second_clr = "#d87c7c"
+else:
+    primary_clr = '#4bff58'
+    second_clr = '33332f'
+    backgroundColor='#0e0e0e'
+    txt_clr = '#f9f9fb'
+
+
 
 
 
@@ -132,11 +144,11 @@ def main():
         prediction = emp_perf_model1.predict([[a,b,c,d,e,f,g,h,i,j,k,m,n,o,p]])
         prediction = int(prediction)
         if prediction == 0:
-            st.warning("Worker's performance is average😐")
+            st.warning("Worker's performance is AVERAGE😐")
         elif prediction == 1:
-            st.success("Worker's performance is good😍")
+            st.success("Worker's performance is GOOD😍")
         else:
-            st.error("Worker's performance is low😞")
+            st.error("Worker's performance is LOW😞")
 
 
 if __name__ == '__main__':
