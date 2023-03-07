@@ -9,8 +9,25 @@ emp_perf_model1=pickle.load(emp_perf_model_path1)
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html = True)
 
+
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
+
+
+
+
+
+
 def main():
-    st.title(":red[Construction Worker's Performance Prediction]")
+    st.title(":white[Construction Worker's Performance Prediction]")
     
     a = st.slider("**Age(years)**",18,50)
     b = st.selectbox("**Gender**",('Female','Male'))
@@ -110,16 +127,16 @@ def main():
         p = 0
     else:
         p = 1               
-    submit = st.button('**Predict Rating**')
+    submit = st.button('**Predict Performance Rating**')
     if submit: 
         prediction = emp_perf_model1.predict([[a,b,c,d,e,f,g,h,i,j,k,m,n,o,p]])
         prediction = int(prediction)
         if prediction == 0:
-            st.warning("Worker's performance is average")
+            st.warning("Worker's performance is average😐")
         elif prediction == 1:
-            st.success("Worker's performance is good")
+            st.success("Worker's performance is good😍")
         else:
-            st.error("Worker's performance is low")
+            st.error("Worker's performance is low😞")
 
 
 if __name__ == '__main__':
