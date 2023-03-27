@@ -57,6 +57,7 @@ semver==2.13.0
 six==1.16.0
 smmap==5.0.0
 statsmodels==0.13.5
+streamlit
 streamlit==1.19.0
 tangled-up-in-unicode==0.2.0
 threadpoolctl==3.1.0
